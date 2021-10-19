@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AladinPage.master.cs" Inherits="Lab2.AladinPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:Table runat="server">
+                <asp:TableRow>
+                    <asp:TableCell>
+                        <asp:Label ID="dvlprName" runat="server" Text="Created by: Tumur Sukhee, Hoon Lee, Louie Maroney" Font-Size="Large"></asp:Label><br />
+                    </asp:TableCell>
+                </asp:TableRow>
+                <asp:TableRow>
+                    <asp:TableCell HorizontalAlign="Right" ColumnSpan="4">
+                        <asp:Button ID="btnLogout" runat="server" Text="Logout" OnClick="btnLogout_Click" />
+                    </asp:TableCell>
+                </asp:TableRow>
+                <asp:TableRow>
+                    <asp:TableCell HorizontalAlign="Center" ColumnSpan="2">
+                        <asp:Image ID="Logo" runat="server" ImageUrl="/Images/logo.jpg" Width="100" Height="100" />
+                    </asp:TableCell>
+                </asp:TableRow>
+                <asp:TableRow>
+                    <asp:TableCell>
+                        <asp:Label ID="LblLoggedInUser" runat="server" Text=""></asp:Label>
+                    </asp:TableCell>
+                </asp:TableRow>
+            </asp:Table>
+            <table>
+                <tr>
+                    <td>
+                        <asp:Button ID="btnProfile" runat="server" Text="User Profile" OnClick="btnProfile_Click" />
+                    </td>
+                    <td>
+                        <asp:Button ID="btnStoryText" runat="server" Text="Upload Text" OnClick="btnStoryText_Click" />
+                    </td>
+                    <td>
+                        <asp:Button ID="btnAnalysis" runat="server" Text="Analysis Page" OnClick="btnAnalysis_Click" />
+                    </td>
+                    <td>
+                        <asp:Button ID="btnCommons" runat="server" Text="Analysis Commons" OnClick="btnCommons_Click" />
+                    </td>
+                    <td>
+                        <asp:Button ID="btnDetails" runat="server" Text="Analysis Details" OnClick="btnDetails_Click" />
+                    </td>
+                </tr>
+            </table>
+
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
+
